@@ -1,0 +1,14 @@
+1.	Count the number of employees who have been with Bignet for four or more years. 
+SELECT COUNT(*) FROM employee_data WHERE TIMESTAMPDIFF(YEAR, yos,CURDATE()) >= 4;
+2.	Count employees based on their ages. 
+SELECT  age, COUNT(*) AS total_employees FROM employee_data GROUP BY age;
+3.	Modify that above so that the ages are listed in a descending order.
+SELECT age, COUNT(*) AS total_employees FROM employee_data GROUP BY age ORDER BY age DESC;
+4.	Find the average in different departments(titles).
+SELECT title, AVG(age) FROM employee_data GROUP BY title;
+5.	Change the above statement so that the data is displayed in a descending order of averages ages.
+SELECT title, AVG(age) AS average_age FROM employee_data GROUP BY title ORDER BY average_age DESC;
+6. Find the list the percentage perk (perk/salary * 100) for each employee with the % perks sorted in a descending order.
+SELECT f_name, l_name, salary,perks,(perks / salary * 100) AS percent_perks FROM employee_data ORDER BY percent_perks DESC;
+
+
