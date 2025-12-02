@@ -1,0 +1,2 @@
+1.	Write the complete SQL statement for creating a new database called addressbook.
+Create table addressbook;
